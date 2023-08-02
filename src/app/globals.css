@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,11 +18,63 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #0c0a09;
+  color:white;
+  font-family: 'Roboto', sans-serif;
 }
+
+.arrow-up {
+  position: absolute;
+  width: 0;
+  left: 34%;
+  top: 38%;
+  height: 0;
+  border-left: 17px solid rgba(0, 0, 0, 0);
+  border-right: 17px solid rgba(0, 0, 0, 0);
+  border-bottom: 64px solid #474747;
+  }
+      
+ 
+  
+  .point {
+      position: absolute;
+      border: solid 1px #C5C5C5;
+      padding: 5px;
+      border-radius: 50%;
+      cursor: pointer;
+  }
+  
+  .selected {
+      background: #fff;
+      border: solid 1px #05D6B5;
+  }
+  
+  .rotary-container {
+    margin: 5px;
+    position: relative;
+      border-radius: 50%;
+    background: linear-gradient(#585858,#8F8F8F 70%, #DBDBDB);
+  }
+  
+  .rotary-switch {
+    margin: 0px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    bottom: 7px;
+    right: 7px;
+    border: solid 1px #7E7E7E;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 1px 1px #39373C, 0 0 1px 1px #69696A;
+    background: linear-gradient(90deg,#636068,#242424 43%, #474747 44%, #474747 56%, #7A7A7A 57%, #5a5a5a 68%);
+    transition: .4s;
+  }
+  
+  .rotary-switch:before {
+    display: block;
+    content: "";
+    width: 2px;
+    height: 35%;
+    background: #FFF;
+    margin: 1% auto;
+  }
